@@ -1,0 +1,16 @@
+XTerm*metaSendsEscape: true
+Xterm*saveLines: 65536
+XTerm*background: black
+XTerm*foreground: white
+XTerm*pointerColor: white
+XTerm*pointerColorBackground: white
+XTerm*cursorColor: white
+XTerm*internalBorder: 3
+XTerm*loginShell: true
+XTerm*scrollBar: true
+XTerm*scrollKey: true
+XTerm*multiClickTime: 250 
+XTerm*faceName: Bitstream Vera Serif Mono
+xterm*faceSize: 11
+xterm*vt100*geometry: 80x60
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
