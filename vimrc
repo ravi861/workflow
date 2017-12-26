@@ -62,6 +62,7 @@ syntax enable
 set hlsearch
 au BufNewFile,BufRead *.c set colorcolumn=81
 au BufNewFile,BufRead *.p4 set filetype=c
+au BufNewFile,BufRead *.thrift set filetype=c
 au Syntax c runtime! syntax/c.vim
 au Syntax py runtime! syntax/python.vim
 
