@@ -284,6 +284,6 @@ hi cComment ctermfg=blue guifg=blue
 hi Search ctermbg=blue
 
 " Sytax
-hi ColorColumn ctermbg=red
-hi OverLength ctermbg=None ctermfg=white guibg=#592929
+hi ColorColumn ctermbg=None
+hi OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/

@@ -571,3 +571,6 @@ let b:current_syntax = "python"
 hi ColorColumn ctermbg=None
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" Search
+hi Search ctermbg=blue

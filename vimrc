@@ -6,6 +6,9 @@ set t_Co=256
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -33,7 +36,6 @@ inoremap <C-U> <C-G>u<C-U>
 if has('mouse')
   set mouse=a
 endif
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -44,8 +46,8 @@ set nobackup
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 "set smarttab
 "set smartindent
 "set ai "Auto indent
@@ -60,11 +62,14 @@ set showmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntax
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colo peachpuff
 syntax enable
+colorscheme peachpuff
 "syntax on
 set hlsearch
+hi Search ctermbg=blue
 au BufNewFile,BufRead *.c set colorcolumn=81
+au BufNewFile,BufRead *.cpp set colorcolumn=81
+au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.p4 set filetype=c
 au BufNewFile,BufRead *.thrift set filetype=c
 au Syntax c runtime! syntax/c.vim
@@ -77,3 +82,17 @@ au Syntax py runtime! syntax/python.vim
 source ~/cscope_maps.vim
 nnoremap <F5> :!cscope -Rb<CR><CR>:cs reset<CR><CR> 
 filetype on
+
+" Enable folding
+"set foldmethod=indent
+"set foldlevel=99
+
+" You complete me
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_autoclose_preview_window_after_completion=1
+"let g:airline_theme='minimalist'
+
+map <C-I> :py3f ~/clang-format.py<cr>
+imap <C-I> <c-o>:py3f ~/clang-format.py<cr>
+
