@@ -7,4 +7,5 @@ cp git-completion.sh ~/.git-completion.bash
 mdkir ~/.vim
 mkdir ~/.vim/syntax
 cp c.vim ~/.vim/syntax/c.vim
+cp cpp.vim ~/.vim/syntax/cpp.vim
 cp python.vim ~/.vim/syntax/python.vim
