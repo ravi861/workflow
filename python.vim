@@ -419,7 +419,7 @@ if s:Enabled("g:python_highlight_builtin_funcs")
       syn keyword pythonBuiltinFunc    print
     endif
   else
-    syn keyword pythonBuiltinFunc    ascii exec memoryview print
+    syn keyword pythonBuiltinFunc    ascii exec memoryview print self
   endif
   syn keyword pythonBuiltinFunc    __import__ abs all any
   syn keyword pythonBuiltinFunc    bin bool bytearray bytes
@@ -569,8 +569,11 @@ let b:current_syntax = "python"
 
 " Sytax
 hi ColorColumn ctermbg=None
-hi OverLength ctermbg=red ctermfg=white guibg=#592929
+hi OverLength ctermbg=None ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" Comments
+hi Comment ctermfg=blue guifg=blue
+
 " Search
-hi Search ctermbg=blue
+hi Search ctermbg=grey
