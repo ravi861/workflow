@@ -4,7 +4,7 @@ cp Xresources ~/.Xresources
 cp cscope_maps.vim ~/cscope_maps.vim
 cp git-prompt.sh ~/.git-prompt.sh
 cp git-completion.sh ~/.git-completion.bash
-mdkir -p ~/.vim
+mkdir -p ~/.vim
 mkdir -p ~/.vim/syntax
 cp c.vim ~/.vim/syntax/c.vim
 cp cpp.vim ~/.vim/syntax/cpp.vim
