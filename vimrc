@@ -6,13 +6,20 @@ set t_Co=256
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'Townk/vim-autoclose'
+Plugin 'majutsushi/tagbar'
+"Plugin 'ryanoasis/vim-devicons'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Valloric/YouCompleteMe'
+"Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+set encoding=UTF-8
 set history=50        " keep 50 lines of command line history
 set ruler        " show the cursor position all the time
 set showcmd        " display incomplete commands
@@ -83,16 +90,30 @@ source ~/cscope_maps.vim
 nnoremap <F5> :!cscope -Rb<CR><CR>:cs reset<CR><CR> 
 filetype on
 
-" Enable folding
-"set foldmethod=indent
-"set foldlevel=99
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use"
 
 " You complete me
 "let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 "let g:ycm_show_diagnostics_ui = 0
 "let g:ycm_autoclose_preview_window_after_completion=1
 "let g:airline_theme='minimalist'
+"let g:deoplete#enable_at_startup = 1
 
+" Vim-Airline Configuration
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1 
+"let g:airline_theme='minimalist'
+"let g:hybrid_custom_term_colors = 1
+"let g:hybrid_reduced_contrast = 1
+
+let python_highlight_all = 1
+map <C-L> :TagbarToggle<CR>
 map <C-I> :py3f ~/clang-format.py<cr>
 imap <C-I> <c-o>:py3f ~/clang-format.py<cr>
-
+map <C-K> :pwd<cr>
+map <C-n> :NERDTreeToggle<CR>
+imap <C-n> <c-o>:NERDTreeToggle<CR>
