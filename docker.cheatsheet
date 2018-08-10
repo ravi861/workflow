@@ -1,0 +1,14 @@
+List image
+docker images
+docker image ls -a
+docker image rm <image>
+
+List container
+docker container ls -a
+docker container rm <container>
+
+Save running container
+docker commit <container> <name>
+
+Connect to running container
+docker exec -it <container> bash
