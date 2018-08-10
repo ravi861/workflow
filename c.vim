@@ -287,3 +287,7 @@ hi Search ctermbg=blue
 hi ColorColumn ctermbg=None
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" Whitespace
+hi ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/

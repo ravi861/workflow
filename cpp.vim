@@ -264,10 +264,8 @@ syntax match cDelimiter    "[();\\]"
 " foldmethod=syntax fix, courtesy of Ivan Freitas
 syntax match cBraces display "[{}]"
 
-
 " Booleans
 syntax keyword cBoolean true false TRUE FALSE
-
 
 " Links
 hi def link cFunction Function
@@ -285,5 +283,9 @@ hi Search ctermbg=blue
 
 " Sytax
 hi ColorColumn ctermbg=None
-hi OverLength ctermbg=red ctermfg=white guibg=#592929
+hi OverLength ctermbg=None ctermfg=red guibg=#592929
 match OverLength /\%81v.\+/
+
+" Whitespace
+hi ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/

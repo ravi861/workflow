@@ -9,3 +9,5 @@ mkdir -p ~/.vim/syntax
 cp c.vim ~/.vim/syntax/c.vim
 cp cpp.vim ~/.vim/syntax/cpp.vim
 cp python.vim ~/.vim/syntax/python.vim
+cp docker.cheatsheet ~/.
+cp clang-format.py ~/.
