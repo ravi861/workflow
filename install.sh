@@ -3,7 +3,7 @@ cp tmux.conf ~/.tmux.conf
 cp Xresources ~/.Xresources
 cp cscope_maps.vim ~/cscope_maps.vim
 cp git-prompt.sh ~/.git-prompt.sh
-cp git-completion.sh ~/.git-completion.bash
+cp git-completion.bash ~/.git-completion.bash
 mkdir -p ~/.vim
 mkdir -p ~/.vim/syntax
 cp c.vim ~/.vim/syntax/c.vim
