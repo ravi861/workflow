@@ -12,6 +12,9 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'RRethy/vim-illuminate'
+Plugin 'inside/vim-search-pulse'
+"Plugin 'Yggdroot/indentLine'
 "Plugin 'ryanoasis/vim-devicons'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
@@ -94,7 +97,7 @@ filetype on
 
 "folding settings
 set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
+set foldnestmax=1      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use"
 
@@ -119,3 +122,4 @@ imap <C-I> <c-o>:py3f ~/clang-format.py<cr>
 map <C-K> :pwd<cr>
 map <C-n> :NERDTreeToggle<CR>
 imap <C-n> <c-o>:NERDTreeToggle<CR>
+set diffopt=vertical
