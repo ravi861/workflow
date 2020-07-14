@@ -80,6 +80,7 @@ colorscheme peachpuff
 "syntax on
 set hlsearch
 hi Search ctermbg=blue
+au BufNewFile,BufRead *.tt set filetype=tt2
 au BufNewFile,BufRead *.c set colorcolumn=81
 au BufNewFile,BufRead *.cpp set colorcolumn=81
 au BufNewFile,BufRead *.h set filetype=c
